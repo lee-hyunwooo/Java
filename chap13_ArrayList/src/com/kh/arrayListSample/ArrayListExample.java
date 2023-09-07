@@ -35,8 +35,11 @@ public class ArrayListExample {
 		fruits.remove(1);
 		System.out.println("바나나 제거 확인 : " + fruits);
 		
-		// ArrayList 반복해서 요소 출력
-		
+		// ArrayList 순회해서 요소 출력
+		System.out.println("모든 과일 목록");
+		//for)요소의 데이터타입 우리가 정할 변수명 : 목록이 들어있는 변수명)
+		for (      String            fruit : fruits)
+			System.out.println(fruit);
 		//ArrayList 비우기
 		fruits.clear();
 		System.out.println("모든 과일을 제거 : " + fruits);
