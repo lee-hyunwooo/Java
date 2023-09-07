@@ -10,6 +10,7 @@ public class toDoSample {
 		list.add("¼÷Á¦");
 		list.add("¹ä¸Ô±â");
 		list.add("¼³°ÅÁö");
+		list.add("¼³°ÅÁö");
 	}
 
 }
