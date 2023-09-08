@@ -19,4 +19,6 @@ public class UserClient {
 
 	 	//ÄÁÆ®·Ñ·¯ °´Ã¼ »ý¼º ¹× ¸ðµ¨ ºä ¼³Á¤
 	 	UserController controller = new UserController(user, view);
+	 	
+	 	
 }
