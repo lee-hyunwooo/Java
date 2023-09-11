@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAndArray {
-
-	public static void main(String[] args) {}
+ 
+	public static void main(String[] args) {
+		ListArray1();							//한 클래스에서 특정 부분만 출력하는 방법 1
+		ListAndArray LAA = new ListAndArray();	//한 클래스에서 특정 부분만 출력하는 방법 2
+				LAA.ListArray2();
+	}
 		
-		public void ListArray1() {
+	
+		public static void ListArray1() {
 		// Array 예제
 		int[] intArray = new int[2]; //크기가 2인 정수 배열 생성
 		intArray[0]=1;
