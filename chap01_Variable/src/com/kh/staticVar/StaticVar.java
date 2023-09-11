@@ -1,0 +1,21 @@
+package com.kh.staticVar;
+
+public class StaticVar {
+
+		public static int serialNum = 10;
+		public String StudentName;
+		
+		public String getStudentName() {
+			return StudentName;
+		}
+		
+		public String setStuedentName(String name) {
+			return StudentName = name;
+		}
+		
+		
+	
+
+
+} 
+
