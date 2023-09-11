@@ -6,7 +6,7 @@ import java.util.List;
 public class ListAndArray {
  
 	public static void main(String[] args) {
-		ListArray1();							//한 클래스에서 특정 부분만 출력하는 방법 1
+		ListArray1();							//한 클래스에서 특정 부분만 출력하는 방법 1 (static 추가하기)
 		ListAndArray LAA = new ListAndArray();	//한 클래스에서 특정 부분만 출력하는 방법 2
 				LAA.ListArray2();
 	}
