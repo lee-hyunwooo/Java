@@ -5,7 +5,9 @@ import java.util.List;
 
 public class ListAndArray {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {}
+		
+		public void ListArray1() {
 		// Array 예제
 		int[] intArray = new int[2]; //크기가 2인 정수 배열 생성
 		intArray[0]=1;
@@ -28,7 +30,9 @@ public class ListAndArray {
 		System.out.println("List 요소 : ");
 		for (int num : intList) {
 			System.out.print(num + " ");
+		 }
 		}
+		public void ListArray2() {
 		//String 으로 변환 후 Array와 List 출력해보기
 		String[] StringArray = new String[3];
 		StringArray[0]="이";
@@ -51,9 +55,9 @@ public class ListAndArray {
 		System.out.println("List 요소 : ");
 		for (String str : stringList) {
 			System.out.print(str + " ");
+			
 		}
 		
-		
 	}
-
+  
 }
