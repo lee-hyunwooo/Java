@@ -30,7 +30,7 @@ public class StudentMain {
 		//for문을 이용해서 1번째~3번쨰 학생까지 출력하기
 		for(int i = 0; i <student.length; i++) {
 			System.out.println((i+1) + "번째학생 이름 : " + student[i].name);
-			System.out.println((i+1) +"번쨰학생 나이 : " + student[i].age);
+			System.out.println((i+1) + "번째학생 나이 : " + student[i].age);
 		}
 		
 		
