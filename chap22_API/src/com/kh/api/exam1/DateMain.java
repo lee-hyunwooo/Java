@@ -40,6 +40,23 @@ public class DateMain {
 		LocalDateTime minusday = day.minusDays(3);
 		System.out.println("3일 전 날짜와 시간 : " + minusday);
 		
+		LocalTime nowTime = LocalTime.now();
+		LocalTime laterTime = nowTime.plusHours(3);
+		System.out.println("3시간 후 시간 : " + laterTime);
+		
+		
+		//특정 날짜와 시간 생성하기
+		LocalDate date1 = LocalDate.of(2023, 9, 13);
+		LocalDate date2 = LocalDate.of(2023, 9, 20);
+		//date1.isBefore(date2)
+		//date1.isAfter(date2)
+		if(date1.isBefore(date2)) {
+			System.out.println(date1 + " 은 " + date2 + "이전입니다.");
+		} else if (date1.isAfter(date1)) {
+			System.out.println(date1 + " 은 " + date1 + "같은 날짜입니다.");
+		} else {
+			System.out.println(date2 + " 은 " + date1 + "이후입니다.");
+		}
 		
 	}
 
