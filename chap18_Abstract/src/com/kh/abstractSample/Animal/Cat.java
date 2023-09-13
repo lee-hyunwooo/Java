@@ -1,16 +1,13 @@
 package com.kh.abstractSample.Animal;
 
-public class Cat extends Animal{
-	private String name;
-	
+public class Cat extends Animal {
+	//积己磊
 	public Cat(String name) {
 		super(name);
-		this.name = name;
-	}
-	@Override
-	public String makeSound() {
-		System.out.println("具克");
-		return name;
 	}
 	
+	@Override
+	public void makeSound() {
+		System.out.println("具克");
+	}
 }
