@@ -1,4 +1,4 @@
-package com.kh.api.exam1;
+package com.kh.objExam;
 
 import java.util.Scanner;
 
