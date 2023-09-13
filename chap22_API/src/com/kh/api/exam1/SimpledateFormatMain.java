@@ -16,7 +16,8 @@ public class SimpledateFormatMain {
  	H : 24시간 형식의 시간
  	m : 분
  	s : 초
- 
+ 	a : 시간앞에 붙일 시 오전/오후를 표시해줌
+   (E): 요일
  */
 	public static void main(String[] args) {
 		Date currentDate = new Date();
