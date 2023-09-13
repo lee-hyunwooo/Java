@@ -9,10 +9,10 @@ public class StringTokenizerMain {
  */
 	public static void main(String[] args) {
 		 StringTokenizerMain stm = new StringTokenizerMain();
-		 //stm.STExame();
-		 stm.stExam2();
+		 //원하는 부분을 출력
+		 stm.stExam6();
 		}
-	public void STExam() {
+	public void stExam() {
 		String text = "apple orange banana";
 		StringTokenizer tokenizer = new StringTokenizer(text);
 
@@ -24,14 +24,14 @@ public class StringTokenizerMain {
 	}
 	public void stExam2() {
 		String text = "apple, banana, grape, orange";
-		StringTokenizer tokenizer = new StringTokenizer(text,",");
+		StringTokenizer tokenizer = new StringTokenizer(text,", ");//구분자는 기본이 공백이므로 특정단어나 문자로 교체하여 사용가능
 		
 		while(tokenizer.hasMoreTokens()) {
 			String fruit = tokenizer.nextToken();
 					System.out.println(fruit);
 		}
 	}
-		public void stExam3() {
+	public void stExam3() {
 			//- 구분자를 사용해서 text 만들고  - 구분자로 끊어서 출력하기
 			String text1 = "apple-banana-grape-orange";
 			StringTokenizer tokenizer1 = new StringTokenizer(text1,"-");
@@ -41,5 +41,51 @@ public class StringTokenizerMain {
 					System.out.println(fruit1);
 			}
 		}
+	public void stEXam4() {
+		//- 구분자를 사용해서 text 만들고  , 구분자로 끊어서 출력하기
+				String text = "apple ,banana ,grape ,orange";
+				StringTokenizer tokenizer = new StringTokenizer(text, " ,");
+				
+				while(tokenizer.hasMoreTokens()) {
+					String fruit = tokenizer.nextToken();
+					System.out.println(fruit);
+				}
+			}
 	
+	public void stExam5() {
+
+		//특정 단어 제외하고 구분자로 분리
+		String text = "This is a test. But not a real one";
+		StringTokenizer tokenizer = new StringTokenizer(text, " .");
+		
+		while(tokenizer.hasMoreTokens()) {
+			String word = tokenizer.nextToken();
+			if (!word.equals("test")) {
+				System.out.println(word);
+			}
+		}
+	}
+	public void stExam6() {
+		//날짜 구분자로 분리
+		String date = "2023-09-13";
+		StringTokenizer tokenizer = new StringTokenizer(date,"-");
+		int year = Integer.parseInt(tokenizer.nextToken());
+		int month = Integer.parseInt(tokenizer.nextToken());
+		int day = Integer.parseInt(tokenizer.nextToken());
+		System.out.println("Year : " + year);
+		System.out.println("Month : " + month);
+		System.out.println("Day : " + day);
+	}
+	public void stringtoMath() {
+		String text = "The price is $15.99";
+		StringTokenizer tokenizer = new StringTokenizer(text, "$.");
+		
+		while(tokenizer.hasMoreTokens()) {
+			String token = tokenizer.nextToken();
+			if (token.matches("\\d+(\\.\\d+)?")) {
+				System.out.println("Number:" + token);
+			}
+		}
+	}
+
 }

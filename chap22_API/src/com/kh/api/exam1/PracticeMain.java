@@ -5,11 +5,16 @@ import java.util.Scanner;
 public class PracticeMain {
 
 	public static void main(String[] args) {
-
+		PracticeMain pm = new PracticeMain();
+			pm.practice1();
+	}
+	public void practice1() {
 		Scanner sc =new Scanner(System.in);
-		System.out.println();
-		
-		
+		System.out.println("첫 번째 문자열을 입력하세요.");
+		String str1 = sc.nextLine();
+		System.out.println("두 번째 문자열을 입력하세요.");
+		String str2 = sc.nextLine();
+		sc.close();
 		
 		//문자열 비교
 		if (str1.equals(str2)) {
