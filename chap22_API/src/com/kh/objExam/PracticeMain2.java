@@ -22,7 +22,7 @@ public class PracticeMain2 {
 		String str = "¿À´Ã Àú³áÀº ¹¹¸ÔÁö";
 		StringBuffer str1 = new StringBuffer(str);
 		str1.reverse();
-		System.out.println(str1);
+		System.out.println(str1.toString());
 	}
 	
 	public void practice3() {
@@ -30,7 +30,7 @@ public class PracticeMain2 {
 		String str = "¿À´Ã Àú³áÀº ¹¹¸ÔÁö";
 		StringBuffer str1 = new StringBuffer(str);
 		str1.insert(10, "? ¤¾¤¾");
-		System.out.println(str1);
+		System.out.println(str1.toString());
 	}
 	
 	public void practice4() {
@@ -38,7 +38,7 @@ public class PracticeMain2 {
 		String str = "¿À´Ã Àú³áÀº ¹¹¸ÔÁö";
 		StringBuffer str1 = new StringBuffer(str);
 		str1.replace(3,5,"Á¡½É");
-		System.out.println(str1);
+		System.out.println(str1.toString());
 	}
 	
 	public void practice5() {
@@ -46,7 +46,7 @@ public class PracticeMain2 {
 		String str = "¿À´Ã Àú³áÀº ¹¹¸ÔÁö";
 		StringBuffer str1 = new StringBuffer(str);
 		str1.delete(0,3);
-		System.out.println(str1);
+		System.out.println(str1.toString());
 	}
 	
 	
