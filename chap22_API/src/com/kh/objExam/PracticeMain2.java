@@ -5,7 +5,7 @@ public class PracticeMain2 {
 	public static void main(String[] args) {
 		PracticeMain2 pt = new PracticeMain2();
 		
-		pt.practice5();
+		pt.practice4();
 		
 	}
 	public void practice1() {
@@ -16,22 +16,23 @@ public class PracticeMain2 {
 		sb.append("¹¹¸ÔÁö");
 		System.out.println(sb);
 	}
+	
 	public void practice2() {
 		//¹®ÀÚ¿­ µÚÁı±â reverse
-		StringBuffer str = new StringBuffer();
-		str.append("¿À´Ã Àú³áÀ» ¹¹¸ÔÁö");
-		str.reverse();
-		System.out.println(str);
+		String str = "¿À´Ã Àú³áÀº ¹¹¸ÔÁö";
+		StringBuffer str1 = new StringBuffer(str);
+		str1.reverse();
+		System.out.println(str1);
 	}
 	
 	public void practice3() {
 		//¹®ÀÚ¿­ »ğÀÔ insert ? ¤¾¤¾
 		StringBuffer str = new StringBuffer();
 		str.append("¿À´Ã Àú³áÀ» ¹¹¸ÔÁö");
-		str.insert(10, "¤¾¤¾");
+		str.insert(10, "? ¤¾¤¾");
 		System.out.println(str);
-		
 	}
+	
 	public void practice4() {
 		//¹®ÀÚ¿­ ´ëÃ¼ replace(,,);
 		StringBuffer str = new StringBuffer();
@@ -47,5 +48,7 @@ public class PracticeMain2 {
 		str.delete(0,3);
 		System.out.println(str);
 	}
+	
+	
 	
 }	
