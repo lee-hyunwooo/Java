@@ -4,7 +4,7 @@ public class ReplaceMain {
 
 	public static void main(String[] args) {
 		ReplaceMain rm = new ReplaceMain();
-		rm.replaceAll();
+		rm.replaceAll2();
 	}
 	public void replace1() {
 		String input = "Hello, world!";
@@ -48,6 +48,12 @@ public class ReplaceMain {
 		//replace 대신 replaceAll 을 이용해서 대소문자 구분없이 문자열 치환하기
 		String reAllstr = originString.replaceAll("(?i)world", "Java");
 		System.out.println(reAllstr);
+	}
+	
+	public void replaceAll2() {
+		String a = "HeLlO world";
+		String b = a.replaceAll("(?i)hello", "Hello");
+		System.out.println(b);
 	}
 	
 	
