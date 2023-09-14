@@ -5,8 +5,8 @@ import java.io.File;
 public class File_delete_Main {
 
 	public static void main(String[] args) {
-		String mainPath ="C:\\Users\\user1\\Desktop\\cute.png";
-		String originFile = mainPath+"cute.png";
+		String mainPath ="C:\\Users\\user1\\Desktop//";
+		String originFile = mainPath+"cute2222.png";
 		
 		//颇老 按眉 积己
 		File fileToDelete = new File(originFile);
