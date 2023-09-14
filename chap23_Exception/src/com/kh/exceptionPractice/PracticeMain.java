@@ -23,11 +23,11 @@ public class PracticeMain {
 	public void NPException() {
 		
 		try{
+			//indexOf subText 에 있는 null 값을 포함한 문자열 검색
 			String text = "Hello World";
 			String subText = null;
 			int length = text.indexOf(subText);
 		} catch(NullPointerException e) {
-			System.out.println("글자가 존재하지 않습니다.");
 			System.out.println("NullPointerException : " + e.getMessage());
 		}
 	}
@@ -36,10 +36,12 @@ public class PracticeMain {
 		try {
 		String text = "123.45";
 		int number = Integer.parseInt(text);
+		//부적절한 형식의 문자열을 정수로 변환
 		System.out.println(number);
 		} catch(NumberFormatException e) {
-			System.out.println("int가 아닌 String 으로 인한 오류" +e.getMessage());
+			System.out.println("NumberFormatException 으로 인한 오류" +e.getMessage());
 		}
 		}
+	
 	
 }
