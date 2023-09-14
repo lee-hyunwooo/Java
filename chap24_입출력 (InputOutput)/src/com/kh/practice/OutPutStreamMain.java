@@ -21,7 +21,7 @@ public class OutPutStreamMain {
 			String data = "안녕하세요.!!!!";
 			
 			//문자열을 바이트 배열로 변환하고 파일에 쓰자
-			byte[] bArray = data.getBytes();
+			byte[] bArray = data.getBytes();//getBytes() 매서드를 사용해서 바이트로 변환
 			try {
 				fos.write(bArray);
 				
