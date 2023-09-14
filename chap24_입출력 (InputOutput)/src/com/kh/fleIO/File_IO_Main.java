@@ -1,21 +1,49 @@
 package com.kh.fleIO;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class File_IO_Main {
 
 	public static void main(String[] args) {
+		try {
+			
+			FileWriter writer = new FileWriter("abcde.txt");
+			writer.write("아니야 재미없어..ㅎ");//파일 쓰기
+			writer.close();//파일 안에 내용을 다 쓰면 닫기
+			
+			FileReader reader = new FileReader("abcde.txt");
+			BufferedReader bufferdReader = new BufferedReader(reader);
+			
+			String line;
+			while((line=bufferdReader.readLine()) != null) {
+				System.out.println(line);
+			}
+			
+			bufferdReader.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+
+	
+}
 	/*	String filePath =  "설명 작성 란/입출력IO.txt";
 		System.out.println("생성");
 		//FileWriter fWriter = new FileWriter(filePath,true);
 		//true : 파일 끝에 이어쓰기
 		//false : 파일 덮어쓰기
-		 */
+		
 		//만약에 날짜가 오늘 날짜인 폴더가 없을 떄
 		//폴더를 만들고
-		mk
 		File f = new File("new.txt");
 		try {
 			if(f.createNewFile()) {
@@ -31,7 +59,5 @@ public class File_IO_Main {
 		
 		String fileName = f.getName();
 		//FileReader fReader = new FileReader(f,true);
-
-	}
-
-}
+ */
+	
