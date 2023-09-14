@@ -41,14 +41,16 @@ public class ExceptionMain {
 			try {
 			                    //050904
 			String juminNumber = "공오공904";
-			int number = Integer.parseInt(juminNumber);
-			System.out.println("숫자 : " + number);
+			int number = Integer.parseInt(juminNumber); //문자열을 정수로 변환 시도
+			System.out.println("숫자 : " + number);	//안에 String이 들어있기 때문에 실행이 되지 않음
 		} catch(NumberFormatException format) {
 			System.out.println("숫자만 넣어주세요.");
-			System.out.println("NumberFormatException 발생" + format.getMessage());
+			System.out.println("NumberFormatException 발생 : " + format.getMessage());
 		}
 		
 		
 		}
 
+		
+		
 }
