@@ -40,11 +40,11 @@ public class PracticeCopy {
 	
 	
 	public void Copy2() {
-		String inputFile = "C:\\Users\\user1\\Desktop\\cute.png";
-		String newFolder = "C:\\Users\\user1\\Desktop//img";
-		File dir = new File(newFolder);
-		boolean success = dir.mkdirs();
-		String outputFile = "C:\\Users\\user1\\Desktop//img//Realcute.jpg";
+		String inputFile = "C:\\Users\\user1\\Desktop\\cute.png"; //사진 불러오기
+		String newFolder = "C:\\Users\\user1\\Desktop//img";  //폴더 생성할 경로
+		File dir = new File(newFolder);			
+		boolean success = dir.mkdirs();						//폴더 생성
+		String outputFile = "C:\\Users\\user1\\Desktop//img//Realcute.jpg";// 사진 복사할 경로
 		
 		try (FileInputStream fis = new FileInputStream(inputFile);
 			FileOutputStream fos = new FileOutputStream(outputFile)) {
