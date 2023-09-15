@@ -30,4 +30,33 @@ public class PracticeMain {
 			System.out.println(item);
 		}
 	}
+	
+	public void practice2() {
+		//Box 객체를 밑에 생성
+		//정수형 데이터를 저장하는 box 인스턴스 생성
+		//문자열 데이터를 저장하는 box 인스턴스 생성
+		Box<Integer> intBox = new Box<>();
+		intBox.add(40);
+		intBox.add(50);
+		int intValue = intBox.get();
+		
+		
+		Box<String> strBox = new Box<>();
+		
+		strBox.add("하하");
+		strBox.add("허허");
+		strBox.add("gggg");
+		String strValue = strBox.get();
+		
+		System.out.println(intValue);
+		System.out.println(strValue);
+		}
+		
+		
+		
+		
+	
+	
+	
+	
 }
