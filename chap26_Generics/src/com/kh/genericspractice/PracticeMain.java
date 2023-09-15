@@ -41,6 +41,7 @@ public class PracticeMain {
 		int intValue = intBox.get();
 		
 		
+			
 		Box<String> strBox = new Box<>();
 		
 		strBox.add("гого");
@@ -48,8 +49,10 @@ public class PracticeMain {
 		strBox.add("gggg");
 		String strValue = strBox.get();
 		
+
 		System.out.println(intValue);
 		System.out.println(strValue);
+		
 		}
 		
 		
