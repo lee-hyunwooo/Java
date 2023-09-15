@@ -1,8 +1,10 @@
 package com.kh.collectionMain;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CollectionMain {
@@ -29,6 +31,20 @@ public class CollectionMain {
 			System.out.println(number);
 		}
 		
+		//Map 예제
+		Map<String, Integer> myMap = new HashMap<>();
+		myMap.put("중국", 10);
+		myMap.put("한국", 1);
+		myMap.put("일본", 90);
+		myMap.put("미국", 2);
+		myMap.put("스페인", 45);
+		myMap.put("독일", 4534);
+		myMap.put("스페인", 42);
+		myMap.put("독일", 45);
+		for(String country : myMap.keySet()) {
+			int code = myMap.get(country);
+			System.out.println(country + " : " + code);
+		}
 		
 	}
 

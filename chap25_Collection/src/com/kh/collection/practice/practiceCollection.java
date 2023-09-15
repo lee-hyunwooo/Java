@@ -1,15 +1,17 @@
 package com.kh.collection.practice;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class practiceCollection {
 
 	public static void main(String[] args) {
 		practiceCollection p = new practiceCollection();
-			p.practiceSet();
+			p.practiceMap();
 	}
 
 	public void practiceList () {
@@ -40,6 +42,23 @@ public class practiceCollection {
 		
 	}
 	
-	
+	public void practiceMap() {
+		//키와 값을 이용해서 map put 한다음 향상된 포문으로 출력하기
+		Map<String, Integer> my = new HashMap<>();
+		my.put("식당", 1);
+		my.put("피시방", 2);
+		my.put("영화관", 3);
+		my.put("아쿠아리움", 4);
+		my.put("피시방", 354);//중복으로 인해 가장 아래에 있는 문구 출력
+		
+		for(String country : my.keySet()) {
+			int code = my.get(country);
+			System.out.println(country + " : " + code);
+		}
+	}
+	// 회원가입은 if country == name ?
+	//           " 중복된 이름입니다. 다시 입력해주세요."
+	// 			else 
+	//			" 사용 가능한 이름입니다."
 	
 }
