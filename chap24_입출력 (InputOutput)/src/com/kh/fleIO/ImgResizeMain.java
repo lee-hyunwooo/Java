@@ -28,7 +28,7 @@ public class ImgResizeMain {
 			
 			//BufferedImage 변환
 			BufferedImage bufResizeImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-			
+			bufResizeImg.getGraphics().drawImage(resizeImg,0,0,null);
 			//리사이즈된 이미지를 파일로 저장하기
 			ImageIO.write(bufResizeImg, "jpg", new File(outputImg));
 			System.out.println("이미지 리사이즈 완료!");
