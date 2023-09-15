@@ -56,9 +56,13 @@ public class practiceCollection {
 			System.out.println(country + " : " + code);
 		}
 	}
-	// 회원가입은 if country == name ?
-	//           " 중복된 이름입니다. 다시 입력해주세요."
+	/* 회원가입 예상 for(String country : my.keySet()) {
+						int code = my.get(country);
+					 if () {
+						country == name ???
+	//     	   	   " 중복된 이름입니다. 다시 입력해주세요."
 	// 			else 
-	//			" 사용 가능한 이름입니다."
+	" 사용 가능한 이름입니다."
+	*/			
 	
 }
