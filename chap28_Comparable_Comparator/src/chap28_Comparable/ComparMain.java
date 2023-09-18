@@ -13,7 +13,7 @@ public class ComparMain {
 		people.add(new Person("학생3", 71));
 
 		//나이를 기준으로 정렬
-		//Collections.short(people);
+		Collections.sort(people);
 		
 		for(Person person : people) {
 			System.out.println(person);
