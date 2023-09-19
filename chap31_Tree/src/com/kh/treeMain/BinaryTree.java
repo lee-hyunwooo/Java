@@ -25,9 +25,9 @@ public class BinaryTree {
 			root = new TreeNode(data);
 			return root;
 		}
-		if(data> root.data) {
+		if(data < root.data) {
 			root.left = insertRec(root.left,data);
-		}else if (data<root.data) {
+		}else if (data>root.data) {
 			root.right = insertRec(root.right,data);
 		}
 			return root;
@@ -37,19 +37,30 @@ public class BinaryTree {
 	 inOrderTR : 중위 순회를 수행하여 트리의 노드를 출력하는데 사용
 	 왼쪽 서브트리 현재노드 오른쪽 서브트리 순서로 노드 출력
 	 */
-	public void onOrderT() {//inOrder Traversal 중위 순회
+	public void inOrderT() {//inOrder Traversal 중위 순회
 		inOrderTR(root);
 	}
 	
 	private void inOrderTR(TreeNode root) {
 		if (root != null) {
 			inOrderTR(root.left);
-			System.out.println(root.data + " ");
+			System.out.println(root.data + " "); //제대로 입력이 되는지 확인만을 위한것
 			inOrderTR(root.right);
 		}
 	}
 	public static void main(String[] args) {
+		BinaryTree tree= new BinaryTree();
 		
+		tree.insert(50);
+		tree.insert(30);
+		tree.insert(70);
+		tree.insert(20);
+		tree.insert(40);
+		tree.insert(60);
+		tree.insert(80);
+		
+		System.out.println("이진 트리의 중위 순회 결과 : ");
+		tree.inOrderT();
 
 	}
 
