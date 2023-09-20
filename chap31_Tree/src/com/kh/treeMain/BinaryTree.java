@@ -50,8 +50,10 @@ public class BinaryTree {
 	}
 	public static void main(String[] args) {
 		BinaryTree tree= new BinaryTree();
-		tree.insert(500);
+		tree.insert(170);
+		tree.insert(57);
 		tree.insert(400);
+		tree.insert(500);
 		tree.insert(50);
 		tree.insert(600);
 		tree.insert(350);
@@ -60,9 +62,7 @@ public class BinaryTree {
 		tree.insert(30);
 		tree.insert(70);
 		tree.insert(330);
-		tree.insert(170);
 		tree.insert(98);
-		tree.insert(57);
 		tree.insert(20);
 		tree.insert(40);
 		tree.insert(60);
