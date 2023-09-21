@@ -24,25 +24,34 @@ DatagramSocket
  	데이터를 주고받을 때 정해놓은 규칙
  	Pack +Bucket 합성어 
  */
+
+//UDP 서버를 나타냄
 public class UDPServer {
+	//start() UDP 서버를 시작하는 메서드 예외를 던질 수 있으므로 예외처리가 필요
 	public void start() throws Exception {
+		//8888번 포트를 사용하는 생성 소켓을 통해 UDP 통신이 이루어짐
 	DatagramSocket socket = new DatagramSocket(8888);
+	//inPacket : 클라이언트로부터 데이터를 수신할 때 사용
+	//outPacket : 클라이언트에게 데이터를 보낼 때 사용
 	DatagramPacket inPacket, outPacket;
 	
 	byte[] inMsg = new byte[10];
 	byte[] outMsg;
-	
+	//while 루프를 사용해서 서버를 계속해서 실행
+	// 이 루프는 서버가 계속해서 클라이언트로부터 데이터를 수신하고 응답하는 역할
 	while(true) {
 		//데이터를 수신하기 위한 패킷을 생성
 		inPacket = new DatagramPacket(inMsg, inMsg.length);
-		//패킷을 통해 데이터를 받음
+		//패킷을 통해 클라이언트로부터 데이터를 받음
 		socket.receive(inPacket);
 		
 		//수신한 패킷에서 클라이언트의 IP & Port
+		//inPacket을 통해 클라이언트의 IP주소와 Port번호 얻기
 		InetAddress address =inPacket.getAddress();
 		int port = inPacket.getPort();
 		
 		//서버의 현재 시간을 시분초 형태로 반환
+		//현재 서버 시간을 hh:mm:ss 형식의 문자열로 변환
 		SimpleDateFormat simpleDate = new SimpleDateFormat("[hh:mm:ss");
 		String time = simpleDate.format(new Date());
 		outMsg = time.getBytes();//byte 배열로 변환
@@ -53,9 +62,13 @@ public class UDPServer {
 	}
 	
 	}
+	//main 메서드 : UDPServer 클래스의 인스턴스를 생성하고 
+				//start() 메서드를 호출하여 UDP 서버 실행
+	//예외 발생하면 예외 처리
 	public static void main(String[] args) {
 		try {
-			new UDPServer.start(); //UDP 서버 실행
+			new UDPServer().start(); //UDP 서버 실행
+			//new UDPServer.start(); error
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
