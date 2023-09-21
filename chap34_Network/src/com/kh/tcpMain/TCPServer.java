@@ -21,7 +21,7 @@ public class TCPServer {
 				Socket client = serverSocket.accept();
 				System.out.println("connect Client");
 				
-				//일어올 때 코드
+				//읽어올 때 코드
 				InputStream inStream = client.getInputStream();
 				Scanner sc = new Scanner(inStream);
 				System.out.println("Server | Client" + sc.nextLine());
